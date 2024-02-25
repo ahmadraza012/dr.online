@@ -1,0 +1,14 @@
+.heading-section {
+  padding: 60px 0;
+  background: #e0f7ff;
+  padding-bottom: 350px;
+}
+.mt-n300 {
+  margin-top: -300px;
+}
+.register-form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 20px 34px 52px 0px #00000008;
+}

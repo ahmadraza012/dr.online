@@ -1,0 +1,55 @@
+/* consultation section css */
+.consultation-section {
+  background: #e0f7ff;
+  padding: 60px 0;
+}
+.trusted-circle {
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.consultation-card {
+  background: #cdeaf4;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 50px 68px 88px 120px rgba(255, 255, 255, 0.6);
+}
+
+.consultation-img {
+  width: 197px;
+  height: 218px;
+  margin: 0 auto;
+}
+.consultation-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* treatment section css  */
+.treatment-box {
+  background: #c3e6f2e5;
+  width: 100%;
+  height: 252px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .consultation-card {
+    box-shadow: 50px 30px 50px 60px rgba(255, 255, 255, 0.6);
+  }
+}
+@media (max-width: 767px) {
+  .consultation-card {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,20 @@
+.treatment-section {
+  background: #e0f7ff;
+  padding: 70px 0;
+}
+.doctor-img {
+  width: 64px;
+  height: 71px;
+}
+.doctor-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 99px;
+}
+
+.option-box {
+  background: #e0f7ff;
+  padding: 20px;
+  border-radius: 16px;
+}

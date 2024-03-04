@@ -67,9 +67,17 @@ li {
 }
 
 /* font-size */
-
+.fs-10 {
+  font-size: 10px !important;
+}
+.fs-11 {
+  font-size: 11px !important;
+}
 .fs-12 {
   font-size: 12px !important;
+}
+.fs-13 {
+  font-size: 13px !important;
 }
 .fs-14 {
   font-size: 14px !important;
@@ -211,6 +219,9 @@ li {
 .white-text {
   color: #fff !important;
 }
+.opacity-9 {
+  opacity: 0.9;
+}
 .text-purple {
   color: #444673;
 }
@@ -220,6 +231,9 @@ li {
 }
 .text-opacity {
   color: #233d55cc;
+}
+.text-opacity1 {
+  color: #233d55b2;
 }
 .textPrimary {
   color: #687eff;
@@ -236,6 +250,43 @@ li {
 .h-46 {
   height: 46px !important;
 }
+/* radio css  */
+.form-check-input.radio-input {
+  border: 1px solid #233d55;
+  border-radius: 99px !important;
+}
+.form-check-input.radio-input:checked {
+  background-color: transparent !important;
+  border: 1px solid #687eff !important;
+}
+.form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23687eff'/%3e%3c/svg%3e");
+}
+/* cart box css  */
+.total-box {
+  background: #cdeaf4;
+  padding: 20px;
+  border-radius: 16px;
+}
+.cart-card {
+  background: #fff;
+  box-shadow: 20px 34px 52px 0px #00000008;
+  padding: 40px;
+  border-radius: 16px;
+}
+.h-110 {
+  height: 110px;
+}
+.cart-circle {
+  width: 32px;
+  height: 32px;
+  background: #687eff;
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* button */
 .main-btn {
   padding: 0px 25px;
@@ -248,12 +299,34 @@ li {
   border: 1px solid #80b3ff;
   color: #fff;
   height: 56px;
+  transition: all 0.3s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+
+.paypal-btn {
+  padding: 0px 25px;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc338;
+  border: 1px solid #ffc338;
+  color: #fff;
+  height: 56px;
   transition: all 0.5s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 2;
   border-radius: 8px;
   letter-spacing: 1px;
+}
+.w-252 {
+  width: 252px;
 }
 .border-btn {
   /* min-width: 150px; */
@@ -271,6 +344,34 @@ li {
   position: relative;
   overflow: hidden;
   z-index: 2;
+}
+.border-btn2 {
+  /* min-width: 150px; */
+  padding: 0px 20px;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #687eff;
+  color: #687eff;
+  height: 40px;
+  transition: all 0.3s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  letter-spacing: 1px;
+  border-radius: 6px;
+}
+.main-btn:hover,
+.border-btn2:hover {
+  background: #12395d;
+  border: 1.5px solid #687eff;
+  transition: all 0.3s linear;
+}
+.h-44 {
+  height: 44px;
 }
 
 .primary-btn::before {
@@ -314,11 +415,11 @@ li {
 .navbar .nav-link.active {
   color: #12395d;
 }
-.navbar .searchbar {
+.searchbar {
   width: 372px;
   position: relative;
 }
-.navbar .searchbar input {
+.searchbar input {
   width: 100%;
   height: 44px;
   padding: 10px;
@@ -327,7 +428,7 @@ li {
   border-radius: 8px;
   padding-right: 30px;
 }
-.navbar .searchbar .search-img {
+.searchbar .search-img {
   position: absolute;
   top: 8px;
   right: 10px;
@@ -343,7 +444,7 @@ li {
 .hero-section {
   background: #e0f7ff;
   padding-top: 40px;
-  padding-bottom: 200px;
+  padding-bottom: 60px;
 }
 .treatment-search input {
   width: 100%;
@@ -441,7 +542,7 @@ li {
 .review-card {
   background: #fefefe;
   border-radius: 16px;
-  padding: 15px;
+  padding: 20px 30px;
 }
 .review-card .patient-img {
   width: 40px;
@@ -687,22 +788,30 @@ li {
   position: absolute;
   background: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 15px;
-  width: 20rem;
-  bottom: -20%;
+  padding: 20px;
+  padding-bottom: 30px;
+  width: 394px;
+  bottom: -44%;
   border-radius: 12px;
   left: 0;
-  transform: translate(-78%, 100%);
-  max-height: 300px;
+  transform: translate(-88%, 100%);
+  max-height: 382px;
   overflow-y: auto;
   opacity: 0;
   z-index: -1;
   transition: all 0.3s linear;
 }
+.h-87 {
+  height: 87px;
+}
 .cart-open .cart-dropdown {
   opacity: 1;
   z-index: 1111;
   transition: all 0.3s linear;
+}
+.cart-dropdown .medicine-select select {
+  height: 31px;
+  font-size: 10px;
 }
 .cart-dropdown::-webkit-scrollbar {
   width: 0px;
@@ -716,6 +825,136 @@ li {
   height: 100%;
   object-fit: cover;
   border-radius: 99px;
+}
+/* treatment css  */
+.findTreatment-section {
+  background: linear-gradient(
+    180deg,
+    rgba(195, 230, 242, 0.9) 0%,
+    rgba(195, 230, 242, 0) 100%
+  );
+  padding: 60px 0;
+}
+
+.treatment-tabs {
+  background: #fff;
+  height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #12395d;
+  border: none;
+  transition: all 0.2s linear;
+}
+.treatment-tabs:hover,
+.treatment-tabs.active {
+  background: #3c80df;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+.treatment-card {
+  background: #fff;
+  border-radius: 6px;
+  width: 100%;
+  padding: 20px;
+  transition: all 0.2s linear;
+}
+.treatment-card:hover {
+  background: #687eff;
+}
+.treatment-card:hover .text-theme {
+  color: #fff !important;
+}
+.treatment-card:hover .text-opacity {
+  color: #ffffffcc;
+}
+.treatment-card:hover .blue-angle {
+  display: none;
+}
+.white-angle {
+  display: none;
+}
+.treatment-card .white-angle {
+  display: inline-block;
+}
+/* order section css  */
+.order-img {
+  width: 100%;
+  height: 228px;
+  position: relative;
+}
+.order-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.order-number {
+  width: 37px;
+  height: 37px;
+  background: #687eff;
+  border: 3px solid #fff;
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+/* team section css  */
+.team-img {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  border-radius: 99px;
+}
+.team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 99px;
+}
+/* secure section css  */
+.secure-section {
+  background: #cfebf5;
+  padding: 70px 0;
+}
+.secure-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  height: 100%;
+}
+.check-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 99px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* timer css  */
+.timer-box {
+  height: 40px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "poppins-blod";
+  color: #687eff;
+  background: #fff;
+  border-radius: 6px;
 }
 @media (min-width: 1400px) {
   .container,
@@ -745,24 +984,7 @@ li {
   .fs-26 {
     font-size: 18px !important;
   }
-  .navbar-collapse {
-    position: fixed;
-    top: 0;
-    left: -1000px;
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    display: block !important;
-    padding: 20px;
-    background: #fff;
-    z-index: 111;
-    transition: all 0.3s linear;
-  }
-  .navbar-collapse.show {
-    transition: all 0.3s linear;
 
-    left: 0px;
-  }
   .no-wrap {
     white-space: normal;
   }
@@ -799,9 +1021,24 @@ li {
   .fs-28 {
     font-size: 20px !important;
   }
+
   .sub-nav {
+    position: fixed;
+    top: 0;
+    left: -1000px;
     width: 100%;
+    height: 100vh;
     overflow-y: auto;
+    display: block !important;
+    padding: 20px;
+    background: #fff;
+    z-index: 111;
+    transition: all 0.3s linear;
+  }
+  .openSubNav .sub-nav {
+    transition: all 0.3s linear;
+
+    left: 0px;
   }
   .scroll-sub {
     width: 500px;
@@ -842,7 +1079,7 @@ li {
     font-size: 12px !important;
   }
 
-  .navbar .searchbar {
+  .searchbar {
     width: 100%;
   }
   .navbar-brand img {
@@ -867,7 +1104,24 @@ li {
     overflow-y: auto;
   }
   .cart-dropdown {
-    left: -30px;
+    left: -3px;
+    width: 350px;
+  }
+  .cart-dropdown .main-btn,
+  .cart-dropdown .border-btn2 {
+    width: 100% !important;
+  }
+  .cart-card {
+    padding: 20px;
+  }
+  .fs-20 {
+    font-size: 15px !important;
+  }
+  .fs-15 {
+    font-size: 12px !important;
+  }
+  .fs-13 {
+    font-size: 10px !important;
   }
 }
 @media (max-width: 360px) {

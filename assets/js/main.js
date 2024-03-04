@@ -51,3 +51,35 @@ function openCartDropDown() {
   var body = document.body;
   body.classList.toggle("cart-open");
 }
+function openSubNav() {
+  var body = document.body;
+  body.classList.toggle("openSubNav");
+}
+
+// timer javascript
+function startTimer() {
+  var hoursDisplay = document.getElementById("hours");
+  var minutesDisplay = document.getElementById("minutes");
+  var secondsDisplay = document.getElementById("seconds");
+
+  var hours = 0;
+  var minutes = 0;
+  var seconds = 0;
+
+  setInterval(function () {
+    seconds++;
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+      if (minutes >= 60) {
+        minutes = 0;
+        hours++;
+      }
+    }
+    hoursDisplay.textContent = (hours < 10 ? "0" : "") + hours;
+    minutesDisplay.textContent = (minutes < 10 ? "0" : "") + minutes;
+    secondsDisplay.textContent = (seconds < 10 ? "0" : "") + seconds;
+  }, 1000);
+}
+
+window.onload = startTimer;

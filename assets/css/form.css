@@ -1,0 +1,86 @@
+.form-section {
+  position: relative;
+  z-index: 1;
+}
+.form-section::before {
+  content: "";
+  position: absolute;
+  height: 140vh;
+  background: #e0f7ff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.recorder-box {
+  background: #c3e6f2;
+  padding: 20px;
+  border-radius: 6px;
+}
+.heading-box {
+  background: #c3e6f2;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #12395d;
+}
+.form-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: -20px 20px 60px 0px #1430601a;
+  padding: 20px 15px;
+}
+
+.form-url,
+.form-url li {
+  list-style: disc;
+}
+.form-url li::marker {
+  font-size: 10px !important;
+}
+.agree-checkbox {
+  border: 1px solid #c7e8f3;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px !important;
+}
+.header-consult {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #687eff;
+  border-radius: 6px 6px 0 0;
+  padding: 15px;
+}
+.clock-circle {
+  width: 48px;
+  height: 46px;
+  border-radius: 99px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.consultation-box {
+  background: #12395d;
+  border-radius: 6px;
+}
+.pharmacist-img {
+  width: 60px;
+  height: 60px;
+}
+.pharmacist-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 99px;
+}
+.hr-white {
+  width: 100%;
+  height: 1px;
+  background: #ffffff4d;
+}

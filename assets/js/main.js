@@ -15,17 +15,80 @@ document.addEventListener("DOMContentLoaded", function () {
 //   var body = document.body;
 //   body.classList.toggle("show");
 // }
-function toggleClass(link) {
-  var body = document.body;
-  body.classList.toggle("menu-show");
 
+function toggleClass(link, isMouseLeaveEvent) {
+  var body = document.body;
   const submenu = document.getElementById("other-lg");
 
-  submenu.classList.remove("general", "sexual", "mens", "womens", "other");
+  if (isMouseLeaveEvent) {
+    const mouseOverEvent = new MouseEvent("mouseover", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    });
+    submenu.dispatchEvent(mouseOverEvent);
+
+    submenu.addEventListener(
+      "mouseleave",
+      function (event) {
+        if (body.classList.contains("menu-show")) {
+          body.classList.remove("menu-show");
+          submenu.classList.remove(
+            "general",
+            "sexual",
+            "mens",
+            "womens",
+            "other"
+          );
+        }
+      },
+      {
+        once: true,
+      }
+    );
+
+    setTimeout(function () {
+      document.addEventListener(
+        "mousemove",
+        function (event) {
+          const rect = submenu.getBoundingClientRect();
+
+          mouseX = event.clientX;
+          mouseY = event.clientY;
+
+          if (
+            !(
+              mouseX >= rect.left &&
+              mouseX <= rect.right &&
+              mouseY >= rect.top &&
+              mouseY <= rect.bottom
+            )
+          ) {
+            if (body.classList.contains("menu-show")) {
+              body.classList.remove("menu-show");
+              submenu.classList.remove(
+                "general",
+                "sexual",
+                "mens",
+                "womens",
+                "other"
+              );
+            }
+          }
+        },
+        { once: true }
+      );
+    }, 200);
+  } else {
+    if (!body.classList.contains("menu-show")) {
+      body.classList.add("menu-show");
+    }
+
+    submenu.classList.remove("general", "sexual", "mens", "womens", "other");
+  }
 
   var linkText = link.innerText.toLowerCase().trim();
-  console.log(linkText);
-  // debugger;
+
   switch (linkText) {
     case "general health":
       submenu.classList.add("general");
@@ -47,9 +110,111 @@ function toggleClass(link) {
   }
 }
 
-function openCartDropDown() {
-  var body = document.body;
-  body.classList.toggle("cart-open");
+function openCartDropDown(isMouseLeaveEvent) {
+  const body = document.body;
+  const cartEle = document.getElementById("cart");
+
+  if (isMouseLeaveEvent) {
+    const mouseOverEvent = new MouseEvent("mouseover", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    });
+    cartEle.dispatchEvent(mouseOverEvent);
+
+    cartEle.addEventListener(
+      "mouseleave",
+      function (event) {
+        if (body.classList.contains("cart-open")) {
+          body.classList.remove("cart-open");
+        }
+      },
+      {
+        once: true,
+      }
+    );
+
+    setTimeout(function () {
+      document.addEventListener(
+        "mousemove",
+        function (event) {
+          const rect = cartEle.getBoundingClientRect();
+
+          mouseX = event.clientX;
+          mouseY = event.clientY;
+
+          if (
+            !(
+              mouseX >= rect.left &&
+              mouseX <= rect.right &&
+              mouseY >= rect.top &&
+              mouseY <= rect.bottom
+            )
+          ) {
+            if (body.classList.contains("cart-open")) {
+              body.classList.remove("cart-open");
+            }
+          }
+        },
+        { once: true }
+      );
+    }, 200);
+  } else {
+    body.classList.add("cart-open");
+  }
+}
+function openLoginDropDown(isMouseLeaveEvent) {
+  const body = document.body;
+  const loginEle = document.getElementById("login");
+
+  if (isMouseLeaveEvent) {
+    const mouseOverEvent = new MouseEvent("mouseover", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    });
+    loginEle.dispatchEvent(mouseOverEvent);
+
+    loginEle.addEventListener(
+      "mouseleave",
+      function (event) {
+        if (body.classList.contains("login-open")) {
+          body.classList.remove("login-open");
+        }
+      },
+      {
+        once: true,
+      }
+    );
+
+    setTimeout(function () {
+      document.addEventListener(
+        "mousemove",
+        function (event) {
+          const rect = loginEle.getBoundingClientRect();
+
+          mouseX = event.clientX;
+          mouseY = event.clientY;
+
+          if (
+            !(
+              mouseX >= rect.left &&
+              mouseX <= rect.right &&
+              mouseY >= rect.top &&
+              mouseY <= rect.bottom
+            )
+          ) {
+            if (body.classList.contains("login-open")) {
+              body.classList.remove("login-open");
+            }
+          }
+        },
+        { once: true }
+      );
+    }, 200);
+  } else {
+    body.classList.add("login-open");
+  }
 }
 function openSubNav() {
   var body = document.body;

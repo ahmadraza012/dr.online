@@ -296,7 +296,7 @@ li {
   justify-content: center;
   align-items: center;
   background-color: #687eff;
-  border: 1px solid #80b3ff;
+  border: 1.5px solid #80b3ff;
   color: #fff;
   height: 56px;
   transition: all 0.3s linear;
@@ -337,7 +337,7 @@ li {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 1.5px solid #fff;
   color: #fff;
   height: 40px;
   transition: all 0.5s ease-in-out;
@@ -354,7 +354,7 @@ li {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  border: 2px solid #687eff;
+  border: 1.5px solid #687eff;
   color: #687eff;
   height: 40px;
   transition: all 0.3s linear;
@@ -369,6 +369,7 @@ li {
   background: #12395d;
   border: 1.5px solid #687eff;
   transition: all 0.3s linear;
+  color: #fff;
 }
 .h-44 {
   height: 44px;
@@ -698,7 +699,10 @@ li {
   left: 130px;
   right: auto;
 }
-.cart-open .menu-close {
+.z-111 {
+  z-index: 111;
+}
+.menu-close {
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -707,7 +711,14 @@ li {
   z-index: 11;
   display: none;
 }
-.cart-open .menu-close {
+.menu-close-1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.menu-show .menu-close {
   display: block;
 }
 /* choose box css  */
@@ -799,15 +810,16 @@ li {
   overflow-y: auto;
   opacity: 0;
   z-index: -1;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .h-87 {
   height: 87px;
 }
+
 .cart-open .cart-dropdown {
   opacity: 1;
   z-index: 1111;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .cart-dropdown .medicine-select select {
   height: 31px;
@@ -815,6 +827,27 @@ li {
 }
 .cart-dropdown::-webkit-scrollbar {
   width: 0px;
+}
+.login-dropdown {
+  position: absolute;
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  width: 180px;
+  bottom: -44%;
+  border-radius: 12px;
+  left: 0;
+  transform: translate(-60%, 100%);
+  max-height: 382px;
+  overflow-y: auto;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.2s linear;
+}
+.login-open .login-dropdown {
+  opacity: 1;
+  z-index: 1111;
+  transition: all 0.2s linear;
 }
 .med-img {
   width: 40px;
@@ -852,9 +885,9 @@ li {
 }
 .treatment-tabs:hover,
 .treatment-tabs.active {
-  background: #3c80df;
-  color: #fff;
-  transition: all 0.2s linear;
+  background: #3c80df !important;
+  color: #fff !important;
+  transition: all 0.2s linear !important;
 }
 .treatment-card {
   background: #fff;
@@ -951,10 +984,11 @@ li {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  font-family: "poppins-blod";
+  font-family: "poppins-bold";
   color: #687eff;
   background: #fff;
   border-radius: 6px;
+  min-width: 65px;
 }
 @media (min-width: 1400px) {
   .container,

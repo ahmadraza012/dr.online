@@ -34,16 +34,30 @@
                 </ul>
 
             </div>
-            <a href="register.html" class="fs-15 fw-400 text-theme d-flex align-items-center gap-2">
-                <img src="assets/images/login.svg" alt="">
-                Login
-            </a>
+            <div class="position-relative">
+                <a href="javascript:void(0)" class="fs-15 fw-400 text-theme d-flex align-items-center gap-2"
+                    onmouseenter="openLoginDropDown()" onmouseleave="openLoginDropDown(true)">
+                    <img src="assets/images/login.svg" alt="">
+                    Login
+                </a>
+                <div class="login-dropdown" id="login">
+                    <a href="register.html" class="fs-15 fw-400 text-theme d-flex align-items-center gap-2 mb-3">
+                        <img src="assets/images/login.svg" alt="">
+                        Login
+                    </a>
+                    <a href="register.html" class="fs-15 fw-400 text-theme d-flex align-items-center gap-2">
+                        <img src="assets/images/login.svg" alt="">
+                        Register
+                    </a>
+                </div>
+            </div>
             <div class="position-relative ms-md-4">
 
-                <a href="javascript:void(0)" class="cart-btn " onmouseover="openCartDropDown()">
+                <a href="javascript:void(0)" class="cart-btn " onmouseenter="openCartDropDown()"
+                    onmouseleave="openCartDropDown(true)">
                     <img src="assets/images/cart.svg" alt="">
                 </a>
-                <div class="cart-dropdown" id="cart" onmouseleave="openCartDropDown()">
+                <div class="cart-dropdown" id="cart">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="fs-18 fw-600 text-theme">
                             Your Cart
@@ -134,7 +148,7 @@
         </div>
     </nav>
     <!-- subnav  -->
-    <div class="sub-nav d-md-flex py-2">
+    <div class="sub-nav d-md-flex py-2 position-relative">
         <div class="container">
             <div class="d-md-none d-flex align-items-center mb-5 justify-content-between">
                 <a href="javascript:void(0)">
@@ -155,37 +169,38 @@
             <div
                 class="d-flex scroll-sub flex-md-row flex-column justify-content-center align-items-md-center gap-5 position-relative">
                 <li>
-                    <a href="category.html" onmouseover="toggleClass(this)" class="sub-links fs-16 fw-400 text-theme">
+                    <a href="category.html" onmouseenter="toggleClass(this)" onmouseleave="toggleClass(this, true)"
+                        class="sub-links fs-16 fw-400 text-theme">
                         General Health
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" onmouseover="toggleClass(this)"
+                    <a href="javascript:void(0)" onmouseenter="toggleClass(this)" onmouseleave="toggleClass(this, true)"
                         class="sub-links fs-16 fw-400 text-theme">
                         Sexual Health
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" onmouseover="toggleClass(this)"
+                    <a href="javascript:void(0)" onmouseenter="toggleClass(this)" onmouseleave="toggleClass(this, true)"
                         class="sub-links fs-16 fw-400 text-theme">
                         Men's Health
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" onmouseover="toggleClass(this)"
+                    <a href="javascript:void(0)" onmouseenter="toggleClass(this)" onmouseleave="toggleClass(this, true)"
                         class="sub-links fs-16 fw-400 text-theme">
                         Women's Health
                     </a>
                 </li>
                 <li class="">
-                    <a href="javascript:void(0)" onmouseover="toggleClass(this)"
+                    <a href="javascript:void(0)" onmouseenter="toggleClass(this)" onmouseleave="toggleClass(this, true)"
                         class="sub-links fs-16 fw-400 text-theme">
                         Other Health
                     </a>
 
 
                 </li>
-                <div class="other-menu" id="other-lg" onmouseleave="toggleClass()">
+                <div class="other-menu" id="other-lg">
                     <div class="position-relative">
                         <div class="triangleTop"></div>
                         <div class="row">
@@ -287,5 +302,6 @@
             </div>
 
         </div>
+
     </div>
 </div>

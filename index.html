@@ -1906,6 +1906,10 @@
         var swiper = new Swiper( ".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             breakpoints: {
                 640: {
                     slidesPerView: 1,
@@ -1926,13 +1930,17 @@
     <script>
         var swiper = new Swiper( ".teamSwiper", {
             slidesPerView: 1,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             breakpoints: {
                 640: {
                     slidesPerView: 1,
                 },
-                // 768: {
-                //     slidesPerView: 2,
-                // },
+                768: {
+                    slidesPerView: 2,
+                },
                 1024: {
                     slidesPerView: 4,
                 },

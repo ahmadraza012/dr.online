@@ -535,7 +535,9 @@ li {
   padding: 10px;
 }
 /* review section css  */
-
+.mb-6 {
+  margin-bottom: 60px !important;
+}
 .patients-section {
   background: #e0f7ff;
   padding: 60px 0;
@@ -559,6 +561,14 @@ li {
   position: absolute;
   top: 4px;
   left: 0;
+}
+
+.medication-img {
+  box-shadow: -20px 20px 60px 0px #1430601a;
+  border-radius: 16px;
+}
+.med-img img {
+  border-radius: 16px;
 }
 /* blog css  */
 .blog-img {
@@ -656,6 +666,12 @@ li {
   z-index: 111;
   transition: opacity 0.2s linear;
 }
+.other-menu .link-others:hover {
+  color: #687eff;
+}
+.other-menu .textPrimary:hover {
+  color: #444673;
+}
 .menu-show .other-menu {
   opacity: 1;
   display: block;
@@ -682,6 +698,14 @@ li {
   transform: rotate(45deg);
   top: -49px;
 }
+.login-dropdown .triangleTop {
+  top: -29px;
+  right: 0;
+}
+.cart-dropdown .triangleTop {
+  top: -29px;
+  right: 15px;
+}
 .other-menu.womens .triangleTop {
   right: 284px;
 }
@@ -702,25 +726,7 @@ li {
 .z-111 {
   z-index: 111;
 }
-.menu-close {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  display: none;
-}
-.menu-close-1 {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-.menu-show .menu-close {
-  display: block;
-}
+
 /* choose box css  */
 .choose-box {
   width: 100%;
@@ -799,18 +805,20 @@ li {
   position: absolute;
   background: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 20px;
+  padding: 20px 0;
   padding-bottom: 30px;
   width: 394px;
   bottom: -44%;
   border-radius: 12px;
   left: 0;
   transform: translate(-88%, 100%);
-  max-height: 382px;
-  overflow-y: auto;
   opacity: 0;
   z-index: -1;
   transition: all 0.2s linear;
+}
+.h-240 {
+  overflow-y: auto;
+  max-height: 240px;
 }
 .h-87 {
   height: 87px;
@@ -825,7 +833,7 @@ li {
   height: 31px;
   font-size: 10px;
 }
-.cart-dropdown::-webkit-scrollbar {
+.h-300::-webkit-scrollbar {
   width: 0px;
 }
 .login-dropdown {
@@ -834,12 +842,11 @@ li {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 20px;
   width: 180px;
-  bottom: -44%;
+  bottom: -99%;
   border-radius: 12px;
   left: 0;
   transform: translate(-60%, 100%);
   max-height: 382px;
-  overflow-y: auto;
   opacity: 0;
   z-index: -1;
   transition: all 0.2s linear;
@@ -1052,6 +1059,9 @@ li {
   }
 }
 @media (max-width: 767px) {
+  .container {
+    padding: 0 30px;
+  }
   .fs-28 {
     font-size: 20px !important;
   }
@@ -1073,9 +1083,6 @@ li {
     transition: all 0.3s linear;
 
     left: 0px;
-  }
-  .scroll-sub {
-    width: 500px;
   }
   .hero-section {
     padding-bottom: 30px;
@@ -1145,6 +1152,9 @@ li {
   .cart-dropdown .border-btn2 {
     width: 100% !important;
   }
+  .main-btn {
+    font-size: 13px !important;
+  }
   .cart-card {
     padding: 20px;
   }
@@ -1156,6 +1166,33 @@ li {
   }
   .fs-13 {
     font-size: 10px !important;
+  }
+  .footer-img {
+    height: 50px;
+  }
+  .menu-close {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: none;
+  }
+  .menu-close-1 {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: none;
+  }
+  .login-open .menu-close {
+    display: block;
+  }
+  .cart-open .menu-close-1 {
+    display: block;
   }
 }
 @media (max-width: 360px) {

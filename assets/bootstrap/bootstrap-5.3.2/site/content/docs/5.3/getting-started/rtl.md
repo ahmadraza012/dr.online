@@ -26,7 +26,8 @@ There are two strict requirements for enabling RTL in Bootstrap-powered pages.
 From there, you'll need to include an RTL version of our CSS. For example, here's the stylesheet for our compiled and minified CSS with RTL enabled:
 
 ```html
-<link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
+<link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param
+"cdn.css_rtl_hash" >}}" crossorigin="anonymous">
 ```
 
 ### Starter template
@@ -39,7 +40,7 @@ You can see the above requirements reflected in this modified RTL starter templa
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
@@ -75,7 +76,7 @@ Our approach to building RTL support into Bootstrap comes with two important dec
 
 2. **Second, we've renamed a handful of directional classes to adopt a logical properties approach.** Most of you have already interacted with logical properties thanks to our flex utilities—they replace direction properties like `left` and `right` in favor `start` and `end`. That makes the class names and values appropriate for LTR and RTL without any overhead.
 
-  For example, instead of `.ml-3` for `margin-left`, use `.ms-3`.
+For example, instead of `.ml-3` for `margin-left`, use `.ms-3`.
 
 Working with RTL, through our source Sass or compiled CSS, shouldn't be much different from our default LTR though.
 
@@ -112,25 +113,19 @@ In the case you're using a custom font, be aware that not all fonts support the 
 For example, to switch from `Helvetica Neue` font for LTR to `Helvetica Neue Arabic` for RTL, your Sass code could look like this:
 
 ```scss
-$font-family-sans-serif:
-  Helvetica Neue #{"/* rtl:insert:Arabic */"},
-  // Cross-platform generic font family (default user interface font)
+$font-family-sans-serif: Helvetica Neue #{"/* rtl:insert:Arabic */"}, // Cross-platform generic font family (default user interface font)
   system-ui,
   // Safari for macOS and iOS (San Francisco)
-  -apple-system,
-  // Chrome < 56 for macOS (San Francisco)
+  -apple-system, // Chrome < 56 for macOS (San Francisco)
   BlinkMacSystemFont,
   // Windows
-  "Segoe UI",
-  // Android
+  "Segoe UI", // Android
   Roboto,
   // Basic web fallback
-  Arial,
-  // Linux
+  Arial, // Linux
   "Noto Sans",
   // Sans serif fallback
-  sans-serif,
-  // Emoji fonts
+  sans-serif, // Emoji fonts
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
@@ -166,7 +161,7 @@ After running Sass then RTLCSS, each selector in your CSS files will be prepende
 1. When switching `.ltr` and `.rtl`, make sure you add `dir` and `lang` attributes accordingly.
 2. Loading both files can be a real performance bottleneck: consider some [optimization]({{< docsref "/customize/optimize" >}}), and maybe try to [load one of those files asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
 3. Nesting styles this way will prevent our `form-validation-state()` mixin from working as intended, thus require you tweak it a bit by yourself. [See #31223](https://github.com/twbs/bootstrap/issues/31223).
-{{< /callout >}}
+   {{< /callout >}}
 
 ## The breadcrumb case
 

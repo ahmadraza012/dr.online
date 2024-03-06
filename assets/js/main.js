@@ -160,7 +160,7 @@ function openCartDropDown(isMouseLeaveEvent) {
       );
     }, 200);
   } else {
-    body.classList.add("cart-open");
+    body.classList.toggle("cart-open");
   }
 }
 function openLoginDropDown(isMouseLeaveEvent) {

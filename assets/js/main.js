@@ -248,3 +248,41 @@ function startTimer() {
 }
 
 window.onload = startTimer;
+
+function togglestrength(button) {
+  document.querySelectorAll(".strength").forEach(function (btn) {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+}
+function togglePrefer(button) {
+  document.querySelectorAll(".prefer").forEach(function (btn) {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+}
+function toggleQuantity(button) {
+  document.querySelectorAll(".med-quantity").forEach(function (btn) {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+}
+function toggleDeliver(button) {
+  document.querySelectorAll(".med-deliver").forEach(function (btn) {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+}
+
+let currentSection = 1;
+
+function showSection(sectionNumber) {
+  if (sectionNumber === currentSection + 1) {
+    document.getElementById(`section${sectionNumber}`).style.display = "block";
+    currentSection = sectionNumber;
+  }
+}

@@ -22,4 +22,13 @@
   font-size: 14px;
   font-weight: 400;
   color: #233d55cc;
+  border: none;
+  width: 100%;
+  transition: all 0.2s linear !important;
+}
+.brand-box:hover,
+.brand-box.active {
+  background: #3c80df !important;
+  color: #fff !important;
+  transition: all 0.2s linear !important;
 }

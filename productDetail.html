@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/productDetail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -50,94 +51,113 @@
                     <div class="fs-24 poppins-bold text-theme mb-3">
                         Price Checker
                     </div>
-                    <div class="fs-15 fw-600  text-theme mb-3">
-                        What strength do you need?
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <div class="brand-box">
-                                25 mg
-                            </div>
+                    <div id="section1">
+                        <div class="fs-15 fw-600  text-theme mb-3">
+                            What strength do you need?
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <div class="brand-box">
-                                50 mg
+                        <div class="row mb-4">
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <button type="button" class="brand-box strength"
+                                    onclick="togglestrength(this), showSection(2)">
+                                    25 mg
+                                </button>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="brand-box">
-                                100 mg
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <button type="button" class="brand-box strength"
+                                    onclick="togglestrength(this), showSection(2)">
+                                    50 mg
+                                </button>
                             </div>
-                        </div>
+                            <div class="col-lg-4 col-md-6">
+                                <button type="button" class="brand-box strength"
+                                    onclick="togglestrength(this), showSection(2)">
+                                    100 mg
+                                </button>
+                            </div>
 
-                    </div>
-                    <div class="fs-15 fw-600  text-theme mb-3">
-                        Which brand would you prefer?
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-lg-4 col-md-6 ">
-                            <div class="brand-box mb-md-0 mb-4">
-                                Viagra
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="brand-box">
-                                Sildenafil
-                            </div>
                         </div>
                     </div>
-                    <div class="fs-15 fw-600  text-theme mb-3">
-                        How many would you like?
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="brand-box">
-                                4 Tablets
-                            </div>
+                    <div id="section2" style="display: none;">
+                        <div class="fs-15 fw-600  text-theme mb-3">
+                            Which brand would you prefer?
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="brand-box">
-                                8 Tablets
+                        <div class="row mb-4">
+                            <div class="col-lg-4 col-md-6 ">
+                                <button type="button" class="brand-box prefer mb-md-0 mb-4"
+                                    onclick="togglePrefer(this), showSection(3)">
+                                    Viagra
+                                </button>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="brand-box">
-                                12 Tablets
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-                            <div class="brand-box">
-                                16 Tablets
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-                            <div class="brand-box">
-                                24 Tablets
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-                            <div class="brand-box">
-                                32 Tablets
+                            <div class="col-lg-4 col-md-6">
+                                <button type="button" class="brand-box prefer"
+                                    onclick="togglePrefer(this), showSection(3)">
+                                    Sildenafil
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="fs-15 fw-600  text-theme mb-3">
-                        How often would you like your medication delivered?
+                    <div id="section3" style="display: none;">
+                        <div class="fs-15 fw-600  text-theme mb-3">
+                            How many would you like?
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <button type="button" class="brand-box med-quantity"
+                                    onclick="toggleQuantity(this), showSection(4)">
+                                    4 Tablets
+                                </button>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <button type="button" class="brand-box med-quantity"
+                                    onclick="toggleQuantity(this), showSection(4)">
+                                    8 Tablets
+                                </button>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <button type="button" class="brand-box med-quantity"
+                                    onclick="toggleQuantity(this), showSection(4)">
+                                    12 Tablets
+                                </button>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+                                <button type="button" class="brand-box med-quantity"
+                                    onclick="toggleQuantity(this), showSection(4)">
+                                    16 Tablets
+                                </button>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+                                <button type="button" class="brand-box med-quantity"
+                                    onclick="toggleQuantity(this), showSection(4)">
+                                    24 Tablets
+                                </button>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+                                <button type="button" class="brand-box med-quantity"
+                                    onclick="toggleQuantity(this), showSection(4)">
+                                    32 Tablets
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row mb-4 pb-2">
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <div class="brand-box">
-                                One time purchase
-                            </div>
+                    <div id="section4" style="display: none;">
+                        <div class="fs-15 fw-600  text-theme mb-3">
+                            How often would you like your medication delivered?
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <div class="brand-box">
-                                Monthly
+                        <div class="row mb-4 pb-2">
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <button type="button" class="brand-box med-deliver" onclick="toggleDeliver(this)">
+                                    One time purchase
+                                </button>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="brand-box">
-                                Every 3 months
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <button type="button" class="brand-box med-deliver" onclick="toggleDeliver(this)">
+                                    Monthly
+                                </button>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <button type="button" class="brand-box med-deliver" onclick="toggleDeliver(this)">
+                                    Every 3 months
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -358,15 +378,21 @@
             <div class="fs-18 fw-400 text-opacity text-center mb-5">
                 Our patient care team is excellent!
             </div>
-            <div class="row mb-4">
-                <div class="col-md-6 mb-md-0 mb-4">
-                    <div class="review-card">
-                        <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
-                            I love how user-friendly this app is! It's so easy to add more events and set reminders,
-                            and it's made my life so much more organized layers and stuff.
-                            <img src="assets/images/quotes.svg" class="quotes" alt="">
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
+
+            <div class="swiper mySwiper mb-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="patient-img">
                                     <img src="assets/images/pateint1.png" alt="">
@@ -375,34 +401,204 @@
                                     Sophie More
                                 </div>
                             </div>
-                            <div class="ratings">
-                                <img src="assets/images/rating-star.png" alt="">
-                            </div>
+
+
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="review-card">
-                        <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
-                            I love how user-friendly this app is! It's so easy to add more events and set reminders,
-                            and it's made my life so much more organized layers and stuff.
-                            <img src="assets/images/quotes.svg" class="quotes" alt="">
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="patient-img">
-                                    <img src="assets/images/patient2.png" alt="">
+                                    <img src="assets/images/pateint1.png" alt="">
                                 </div>
                                 <div class="fs-16 fw-600 text-theme">
                                     Sophie More
                                 </div>
                             </div>
-                            <div class="ratings">
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
                                 <img src="assets/images/rating-star.png" alt="">
                             </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="patient-img">
+                                    <img src="assets/images/pateint1.png" alt="">
+                                </div>
+                                <div class="fs-16 fw-600 text-theme">
+                                    Sophie More
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="patient-img">
+                                    <img src="assets/images/pateint1.png" alt="">
+                                </div>
+                                <div class="fs-16 fw-600 text-theme">
+                                    Sophie More
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="patient-img">
+                                    <img src="assets/images/pateint1.png" alt="">
+                                </div>
+                                <div class="fs-16 fw-600 text-theme">
+                                    Sophie More
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="patient-img">
+                                    <img src="assets/images/pateint1.png" alt="">
+                                </div>
+                                <div class="fs-16 fw-600 text-theme">
+                                    Sophie More
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="patient-img">
+                                    <img src="assets/images/pateint1.png" alt="">
+                                </div>
+                                <div class="fs-16 fw-600 text-theme">
+                                    Sophie More
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="patient-img">
+                                    <img src="assets/images/pateint1.png" alt="">
+                                </div>
+                                <div class="fs-16 fw-600 text-theme">
+                                    Sophie More
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="fs-18 fw-600 text-theme mb-2">
+                                “Infinitely quicker”
+                            </div>
+                            <div class="ratings mb-2">
+                                <img src="assets/images/rating-star.png" alt="">
+                            </div>
+                            <div class="fs-18 fw-400 text-opacity mb-3 position-relative">
+                                I love how user-friendly this app is! It's so easy to add more events and set reminders,
+                                and it's made my life so much more organized layers and stuff.
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="patient-img">
+                                    <img src="assets/images/pateint1.png" alt="">
+                                </div>
+                                <div class="fs-16 fw-600 text-theme">
+                                    Sophie More
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
             <div class="d-flex align-items-center flex-wrap justify-content-center gap-md-4 gap-3">
                 <img src="assets/images/trust-pilot.svg" alt="">
@@ -534,6 +730,33 @@
 
     <script src="/assets/bootstrap/bootstrap-5.3.2/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
+
+<script>
+    var swiper = new Swiper( ".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+
+    } );
+</script>
 
 </html>
